@@ -1,1 +1,84 @@
-# daouadizineeddine.github.io
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio professionnel de Zine-Eddine DAOUADI, étudiant en MP2I à Janson de Sailly.">
+    <title>Zine-Eddine DAOUADI | Accueil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html" class="logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>Zine-Eddine DAOUADI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Présentation</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="travaux.html">Travaux</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-tag">Étudiant en MP2I / MPI</div>
+            <h1>DAOUADI <span>Zine-Eddine</span></h1>
+            <p>Passionné par les sciences, l'économie et la philosophie. <br>Classe préparatoire MP2I/MPI – Lycée Janson de Sailly, Paris.</p>
+            <div class="hero-buttons">
+                <a href="contact.html" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Me contacter</a>
+                <a href="travaux.html" class="btn btn-outline"><i class="fas fa-folder-open"></i> Voir mes travaux</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="presentation">
+        <div class="container">
+            <div class="section-header">
+                <h2>Qui suis-je ?</h2>
+                <p>Je suis DAOUADI Zine-Eddine, un étudiant curieux, rigoureux et toujours à la recherche du progrès.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Bonjour, je suis <strong>Zine-Eddine DAOUADI</strong>, étudiant en première année de la filière <strong>MP2I</strong> (Mathématiques, Physique, Informatique) au lycée Janson de Sailly. J'aspire à me construire des bases solides, sur le plan professionnel mais aussi personel via la rigueur, l'adaptation aux contraintes et le progrès par ma formation de haut-niveau.</p>
+                    <p>Je m'intéresse surtout à la physique, l'informatique et l'économie. Mon objectif est d'intégrer une grande école d'ingénieurs, afin de construire un profil polyvalent en physique et en ingénierie.</p>
+                    <ul class="info-list">
+                        <li><i class="fas fa-graduation-cap"></i> <strong>MP2I/MPI</strong> – Lycée Janson de Sailly (2025–2027)</li>
+                        <li><i class="fas fa-code"></i> <strong>Langages</strong> Python, C, Ocaml, Java, HTML/CSS, SQL, R.</li>
+                        <li><i class="fas fa-calculator"></i> <strong>Capacités professionnelles</strong> Capacités de modélisation avancée, statistiques de haut niveau, communication, capacités calculatoires & résolution de problèmes.</li>
+                        <li><i class="fas fa-trophy"></i> <strong>Prix</strong> - Victoire au concours de plaidoiries du Lycée Louis-Pasteur (2025) – sujet "harcèlement scolaire", mention au DNA. - Score de 925/990 au TOEIC (2023-2025). </li>
+                    </ul>
+                </div>
+                <div class="about-img">
+                    <!-- Remplacement de l'image avec le fichier local et ajustement de la taille -->
+                    <img src="DAOUADI Zine-Eddine ENS.png" 
+                         alt="Portrait de Zine-Eddine DAOUADI" 
+                         style="width: 100%; max-width: 380px; height: auto; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);"
+                         loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; <span id="current-year"></span> Zine-Eddine DAOUADI – Étudiant en MP2I à Janson de Sailly. Tous droits réservés.</p>
+        <p style="margin-top: 0.5rem;"><a href="#"><i class="fas fa-arrow-up"></i> Retour en haut</a></p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
