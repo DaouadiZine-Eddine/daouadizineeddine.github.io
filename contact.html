@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zine-Eddine DAOUADI | Contact</title>
+    <title>Zine-Eddine DAOUADI | Contact.</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -71,19 +71,31 @@
         <p style="margin-top: 0.5rem;"><a href="#"><i class="fas fa-arrow-up"></i> Retour en haut</a></p>
     </div>
 </footer>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 <script>
+  
+    (function() {
+        emailjs.init({
+            publicKey: "YgiuW8Sw1ubcZcm_q",  
+        });
+    })();
+
     document.getElementById('current-year').textContent = new Date().getFullYear();
 
     const form = document.getElementById('contact-form');
     const feedback = document.getElementById('form-feedback');
 
     if (form) {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
+
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const message = document.getElementById('message').value.trim();
 
+            // Validation des champs
             if (!name || !email || !message) {
                 showFeedback('Veuillez remplir tous les champs obligatoires.', '#fee2e2', '#b91c1c');
                 return;
@@ -92,9 +104,34 @@
                 showFeedback('Adresse email invalide.', '#fee2e2', '#b91c1c');
                 return;
             }
-            showFeedback('Message envoyé avec succès ! Je vous répondrai rapidement.', '#e0f2fe', '#0f3b5c');
-            form.reset();
-            setTimeout(() => feedback.classList.remove('show'), 4000);
+
+
+            const submitButton = form.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi...';
+
+            try {
+    
+                const response = await emailjs.send(
+                    "service_o0g81ep",   
+                    "template_mtx32qj",  
+                    {
+                        name: name,
+                        email: email,
+                        message: message,
+                    }
+                );
+
+               
+                showFeedback('Message envoyé avec succès ! Je vous répondrai rapidement.', '#e0f2fe', '#0f3b5c');
+                form.reset();
+            } catch (error) {
+                console.error("Erreur EmailJS :", error);
+                showFeedback('Erreur lors de l’envoi. Vérifiez votre connexion ou réessayez plus tard.', '#fee2e2', '#b91c1c');
+            } finally {
+                submitButton.disabled = false;
+                submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Envoyer';
+            }
         });
     }
 
