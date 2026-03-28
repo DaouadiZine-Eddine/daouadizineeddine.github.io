@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zine-Eddine DAOUADI | Blogs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html" class="logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>Zine-Eddine DAOUADI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Présentation</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="travaux.html">Travaux</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="container" style="margin-top: 3rem;">
+        <div class="section-header">
+            <h2>Rédactions / Blogs</h2>
+            <p>Mes publications et réflexions en sciences et économie</p>
+        </div>
+        <div class="blogs-grid">
+            <!-- Blog scientifique avec lien exact demandé -->
+            <div class="blog-card">
+                <i class="fas fa-flask"></i>
+                <h4>Blog scientifique</h4>
+                <p>Mathématiques, physique quantique, algorithmique et vulgarisation scientifique.</p>
+                <a class="blog-link" href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://blogmathsetscienceszineeddine.blogspot.com/&ved=2ahUKEwiJuYmkv7GTAxUQTKQEHS02JSsQFnoECCYQAQ&usg=AOvVaw0b_Pwg3fXqnFqZPBnuI2Id" target="_blank" rel="noopener noreferrer">
+                    Lire le blog <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+            <!-- Blog économique redirige maintenant vers blog_economique.html -->
+            <div class="blog-card">
+                <i class="fas fa-chart-line"></i>
+                <h4>Blog économique</h4>
+                <p>Analyse macroéconomique, crypto-monnaies, modélisation financière et data éco.</p>
+                <a class="blog-link" href="blog_economique.html">
+                    Lire le blog <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; <span id="current-year"></span> Zine-Eddine DAOUADI – Étudiant en MP2I à Janson de Sailly. Tous droits réservés.</p>
+        <p style="margin-top: 0.5rem;"><a href="#"><i class="fas fa-arrow-up"></i> Retour en haut</a></p>
+    </div>
+</footer>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
