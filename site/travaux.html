@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zine-Eddine DAOUADI | Travaux</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html" class="logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>Zine-Eddine DAOUADI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Présentation</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="travaux.html">Travaux</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="container" style="margin-top: 3rem;">
+        <div class="section-header">
+            <h2>Mes travaux & projets</h2>
+            <p>Réalisations personnelles et académiques en MP2I</p>
+        </div>
+        <div class="projects-grid">
+            <!-- Projet Quantique -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="quantique.png" alt="Simulateur quantique" style="width: 100%; height: auto; border-radius: 8px;">
+                </div>
+                <div class="project-info">
+                    <h3>Simulateur : particules et inférences en mécanique quantique</h3>
+                    <p>Implémentation en Python (pygame) d'un simulateur de physique quantique avec approximations.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Physique quantique</span>
+                        <span class="tag">Modélisation</span>
+                    </div>
+                    <a href="https://github.com/DaouadiZine-Eddine/Quantum-Physics-Simulator-for-particles." target="_blank" rel="noopener noreferrer" class="project-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <!-- Projet Finance -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="finance.png" alt="Algorithmes financiers" style="width: 100%; height: auto; border-radius: 8px;">
+                </div>
+                <div class="project-info">
+                    <h3>Algorithmes de retour sur trace & finance</h3>
+                    <p>Modélisation d'actions et de portefeuilles en C pour résoudre des problèmes ouverts en finance.</p>
+                    <div class="project-tags">
+                        <span class="tag">Finance</span>
+                        <span class="tag">C / structures</span>
+                    </div>
+                    <a href="https://github.com/DaouadiZine-Eddine/Backtracking-as-a-solution-to-open-financial-problems-in-C." target="_blank" rel="noopener noreferrer" class="project-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <!-- Projet Optique -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="optique.png" alt="Simulateur optique" style="width: 100%; height: auto; border-radius: 8px;">
+                </div>
+                <div class="project-info">
+                    <h3>Simulateur Optique : lentilles convergentes</h3>
+                    <p>Simulateur web de lentilles convergentes, modélisant le passage des rayons selon les paramètres.</p>
+                    <div class="project-tags">
+                        <span class="tag">Optique géométrique</span>
+                        <span class="tag">JavaScript / Canvas</span>
+                    </div>
+                    <a href="https://github.com/DaouadiZine-Eddine/Optics-simulator-for-converging-lenses." target="_blank" rel="noopener noreferrer" class="project-link">Découvrir <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; <span id="current-year"></span> Zine-Eddine DAOUADI – Étudiant en MP2I à Janson de Sailly. Tous droits réservés.</p>
+        <p style="margin-top: 0.5rem;"><a href="#"><i class="fas fa-arrow-up"></i> Retour en haut</a></p>
+    </div>
+</footer>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

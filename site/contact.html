@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zine-Eddine DAOUADI | Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html" class="logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>Zine-Eddine DAOUADI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Présentation</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="travaux.html">Travaux</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="container" style="margin-top: 3rem;">
+        <div class="section-header">
+            <h2>Contact professionnel</h2>
+            <p>Collaborations, discussions et questions — n'hésitez pas à me contacter.</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3><i class="fas fa-address-card"></i> Coordonnées</h3>
+                <div class="contact-detail">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Lycée Janson de Sailly, 106 rue de la Pompe, 75116 Paris</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/zine-eddine-daouadi-4a1579388/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/DaouadiZine-Eddine" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="contact-card">
+                <h3><i class="fas fa-paper-plane"></i> Envoyez-moi un message</h3>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Nom complet *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Adresse email *" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="4" placeholder="Votre message ..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Envoyer</button>
+                    <div id="form-feedback" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; <span id="current-year"></span> Zine-Eddine DAOUADI – Étudiant en MP2I à Janson de Sailly. Tous droits réservés.</p>
+        <p style="margin-top: 0.5rem;"><a href="#"><i class="fas fa-arrow-up"></i> Retour en haut</a></p>
+    </div>
+</footer>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    const form = document.getElementById('contact-form');
+    const feedback = document.getElementById('form-feedback');
+
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                showFeedback('Veuillez remplir tous les champs obligatoires.', '#fee2e2', '#b91c1c');
+                return;
+            }
+            if (!email.includes('@') || !email.includes('.')) {
+                showFeedback('Adresse email invalide.', '#fee2e2', '#b91c1c');
+                return;
+            }
+            showFeedback('Message envoyé avec succès ! Je vous répondrai rapidement.', '#e0f2fe', '#0f3b5c');
+            form.reset();
+            setTimeout(() => feedback.classList.remove('show'), 4000);
+        });
+    }
+
+    function showFeedback(msg, bgColor, textColor) {
+        feedback.textContent = msg;
+        feedback.style.background = bgColor;
+        feedback.style.color = textColor;
+        feedback.classList.add('show');
+        setTimeout(() => feedback.classList.remove('show'), 3500);
+    }
+</script>
+</body>
+</html>

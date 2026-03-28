@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog économique | Prochainement</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1a2c3e;
+            background-color: #f8fafc;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0f3b5c;
+            text-decoration: none;
+        }
+
+        .logo i {
+            color: #2c7da0;
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #334e68;
+            font-weight: 500;
+            transition: color 0.2s;
+            cursor: default;
+            opacity: 0.7;
+        }
+
+        .nav-links a:hover {
+            color: #334e68;
+        }
+
+        /* Main - Under construction */
+        main {
+            padding: 3rem 0 4rem;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .construction-card {
+            background: white;
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.1);
+            padding: 3rem 2rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .construction-icon {
+            font-size: 5rem;
+            color: #e67e22;
+            margin-bottom: 1.5rem;
+        }
+
+        .construction-icon i {
+            background: #fef3e8;
+            padding: 1rem;
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #0f3b5c;
+            margin-bottom: 1rem;
+        }
+
+        .under-construction-badge {
+            display: inline-block;
+            background: #f1c40f;
+            color: #2c3e50;
+            font-weight: 600;
+            padding: 0.25rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.8rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .construction-message {
+            font-size: 1.1rem;
+            color: #2c3e4e;
+            margin-bottom: 2rem;
+        }
+
+        .progress-container {
+            background: #e9ecef;
+            border-radius: 30px;
+            height: 8px;
+            width: 80%;
+            margin: 2rem auto;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, #2c7da0, #61a5c2);
+            width: 68%;
+            height: 100%;
+            border-radius: 30px;
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.7; }
+            50% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+
+        .topics {
+            background: #f1f5f9;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            margin: 2rem 0 1rem;
+            text-align: left;
+        }
+
+        .topics h3 {
+            font-size: 1.25rem;
+            color: #0f3b5c;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .topics-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .topic-item {
+            flex: 1;
+            min-width: 160px;
+            text-align: center;
+            padding: 0.8rem;
+        }
+
+        .topic-item i {
+            font-size: 2rem;
+            color: #2c7da0;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .topic-item span {
+            display: block;
+            font-weight: 500;
+            color: #1e2f3e;
+        }
+
+        .topic-item p {
+            font-size: 0.85rem;
+            color: #5b6e8c;
+            margin-top: 0.25rem;
+        }
+
+        .wait-message {
+            background: #eef2ff;
+            border-left: 4px solid #2c7da0;
+            padding: 1rem;
+            border-radius: 1rem;
+            margin: 1.5rem 0 0;
+            font-size: 0.95rem;
+            color: #1f4e6e;
+        }
+
+        .note {
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            color: #7e8aa2;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0f3b5c;
+            color: #cbd5e6;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #a0c4e2;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .construction-card {
+                padding: 2rem 1.5rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .topics-grid {
+                gap: 1rem;
+            }
+            .topic-item {
+                min-width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="navbar">
+            <a href="#" class="logo">
+                <i class="fas fa-chart-line"></i>
+                <span>Blog Économique.</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">Marchés</a></li>
+                <li><a href="#">À venir</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <div class="construction-card">
+            <div class="construction-icon">
+                <i class="fas fa-hard-hat"></i>
+            </div>
+            <div class="under-construction-badge">
+                <i class="fas fa-tools"></i> EN TRAVAUX
+            </div>
+            <h1>Site pas encore disponible !</h1>
+            <div class="construction-message">
+                <p>Bonjour, ce blog n'est pas encore terminé !<br>
+                Merci de votre patience, le blog ouvrira par le futur et vous aurez l'occasion de lire des articles variés en finance !</p>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+
+            
+            <div class="topics">
+                <h3><i class="fas fa-chart-pie"></i> Ce que vous découvrirez dans mon blog économique !</h3>
+                <div class="topics-grid">
+                    <div class="topic-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Private Equity</span>
+                        <p>Analyse des LBO, stratégies d’investissement et performances des fonds, mise en exergue du domaine et de son état !</p>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-university"></i>
+                        <span>Grandes banques</span>
+                        <p>Modèles d’affaires, histoires et évolution.</p>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-chess-queen"></i>
+                        <span>Stratégies financières</span>
+                        <p>Décryptage des manœuvres des institutions et family offices</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wait-message">
+                <i class="fas fa-hourglass-half"></i> En attendant, je vous prie de patienter, le premier article devrait vous intéresser par le futur.
+            </div>
+            <div class="note">
+                <i class="fas fa-wrench"></i> Le Blog Économique est en construction – merci pour votre patience.
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; <span id="current-year"></span> Blog Économique de DAOUADI Zine-Eddine – Analyses en finance & économie. Tous droits réservés.</p>
+        <p style="margin-top: 0.5rem;"><a href="#"><i class="fas fa-arrow-up"></i> Retour en haut</a></p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
