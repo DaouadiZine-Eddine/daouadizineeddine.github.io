@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://daouadizine-eddine.github.io/daouadizineeddine.github.io/sitemap.xml
